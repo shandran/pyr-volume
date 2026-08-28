@@ -29,7 +29,9 @@ The Pyr dataset and associated reconstructions are produced and maintained by th
 
 The original code and notebooks in this repository are licensed under the [MIT License](LICENSE).
 
-The Pyr.ai CA3 dataset, reconstructions, annotations, and other source data are not covered by this repository's MIT License. Publicly released Pyr data are provided under CC BY-NC 4.0 and remain subject to the applicable Pyr.ai terms, principles, attribution requirements, and contributor permissions.
+The Pyr.ai CA3 dataset, reconstructions, annotations, and other source data are not covered by this repository's MIT License. Publicly released Pyr data are provided under CC BY-NC 4.0 and remain subject to the applicable Pyr.ai terms, principles, attribution requirements, and contributor permissions.  
+
+Example visualization images in this repository are also provided under CC BY-NC 4.0.
 
 ## Repository Structure
 
