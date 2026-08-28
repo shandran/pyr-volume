@@ -25,6 +25,12 @@ Publicly released Pyr data are made available under the **Creative Commons Attri
 
 The Pyr dataset and associated reconstructions are produced and maintained by the Pyr project and its contributors. This repository contains independently developed visualization and analysis code and is not an official Pyr.ai repository.
 
+## License
+
+The original code and notebooks in this repository are licensed under the [MIT License](LICENSE).
+
+The Pyr.ai CA3 dataset, reconstructions, annotations, and other source data are not covered by this repository's MIT License. Publicly released Pyr data are provided under CC BY-NC 4.0 and remain subject to the applicable Pyr.ai terms, principles, attribution requirements, and contributor permissions.
+
 ## Repository Structure
 
 The repository is organized around Jupyter notebooks for individual visualization and analysis workflows, together with supporting helper modules and selected example outputs.
