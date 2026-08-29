@@ -25,6 +25,10 @@ Publicly released Pyr data are made available under the **Creative Commons Attri
 
 The Pyr dataset and associated reconstructions are produced and maintained by the Pyr project and its contributors. This repository contains independently developed visualization and analysis code and is not an official Pyr.ai repository.
 
+## Acknowledgments
+
+Special thanks to **Zhihao Zheng** for his assistance in providing access to the Pyr.ai CAVE volume and for his guidance and support in working with the dataset.
+
 ## License
 
 The original code and notebooks in this repository are licensed under the [MIT License](LICENSE).
