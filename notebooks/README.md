@@ -227,10 +227,17 @@ The notebooks retain workflow-specific logic locally where keeping it visible ma
 Several notebooks create local data products such as:
 
 ```text
-data/
-├── meshes/
-│   └── dec/
-└── synapse_tables/
+pyr-volume/
+├── data/
+│   ├── meshes/
+│   │   └── dec/
+│   ├── nuclei/
+│   ├── synapse_tables/
+│   └── mouse_hippocampus_ca3_cell_annotations_export.csv
+│
+└── outputs/
+    └── plotly/
+        └── screened_root_population_centroids_3d.html
 ```
 
 These generated datasets can be large and are not intended to be part of the GitHub repository. Paths are resolved relative to the Pyr project directory so that the notebooks do not depend on a particular local drive or username.
