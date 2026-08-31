@@ -98,6 +98,93 @@ The following images are example views produced with the VTK visualization workf
 
 *Close-up view of the same neuron with mitochondria and synapses.*
 
+---
+
+### [`04_pyr_download_nuclei_table.ipynb`](04_pyr_download_nuclei_table.ipynb)
+
+Archival and demonstration notebook for querying and downloading the Pyr.ai `c3_nuclei_v1` nuclei table from the `zheng_ca3` datastack at materialization version `195`.
+
+The notebook:
+
+* queries the CAVE nuclei table and stores a validated local Parquet copy alongside metadata JSON
+* demonstrates inspection of nuclei-table structure, root-ID relationships, coordinate fields, and volume information
+* includes exploratory comparison with the companion CA3 annotation CSV included in the repository
+* preserves example outputs showing the downloaded table and follow-up diagnostics
+
+This notebook serves both as a practical data-acquisition example and as an archival record of nuclei-table exploration.
+
+---
+
+### [`05_pyr_curate_nonvascular_nuclei_roots.ipynb`](05_pyr_curate_nonvascular_nuclei_roots.ipynb)
+
+Exploratory and manual-curation notebook for identifying and screening out vascular segmentations from the nuclei-associated root population.
+
+The notebook:
+
+* aggregates nuclei rows into root-level features, examining nucleus counts, volume summaries, and spatial ranges
+* uses annotated neuronal roots as contextual, nonvascular reference examples
+* explores conservative rules for identifying unusual roots requiring manual inspection
+* uses manual visual inspection in Pyr.ai, Neuroglancer, and Spelunker to confirm obvious vascular roots and reject nonvascular candidates such as astrocytes or neuronal segmentations/fragments
+* removes the curated vascular roots to produce a screened nonvascular working population
+
+The screening rules are exploratory heuristics, and final vascular decisions reflect manual visual curation rather than an automated vascular classifier.
+
+---
+
+### [`06_pyr_screened_root_population_exploration.ipynb`](06_pyr_screened_root_population_exploration.ipynb)
+
+Exploratory and archival analysis notebook examining the screened root population produced in Notebook 05.
+
+The notebook:
+
+* compares annotated-neuron and unlabeled populations using nuclei-derived features
+* explores feature distributions, median differences, volume summaries, coordinate distributions, and candidate lists for manual Neuroglancer inspection
+* tests several static and interactive visualization approaches
+* culminates in an initial 3D Plotly centroid visualization
+* documents the exploratory path that led to the more polished Plotly viewer in Notebook 07
+
+All comparisons and feature summaries are presented as exploratory characterizations rather than validated biological classification results.
+
+---
+
+### [`07_pyr_3dplotly_viewer.ipynb`](07_pyr_3dplotly_viewer.ipynb)
+
+Polished interactive **3D Plotly visualization** notebook for exploring the screened root population with optional cellular mesh overlays.
+
+The notebook supports two primary visualization modes:
+
+1. **Centroid-only 3D view** of the screened root population
+2. **Optional overlay view** with selected local decimated meshes
+
+Visualization characteristics and requirements:
+
+* Centroid color distinguishes `annotated_neuron` and `unlabeled` populations.
+* Marker size is derived from nucleus-volume information.
+* Mesh overlays require appropriate local decimated PLY files under `data/meshes/dec` along with the relevant mesh dependencies.
+* Missing requested meshes can be skipped while the centroid view remains fully usable.
+
+[Open the interactive 3D centroid viewer](../outputs/plotly/screened_root_population_centroids_3d.html)
+
+---
+
+### [`07_pyr_vtk_nuclei_and_mesh_viewer.ipynb`](07_pyr_vtk_nuclei_and_mesh_viewer.ipynb)
+
+Interactive **VTK/OpenGL 3D visualization** notebook for rendering cellular meshes alongside volume-wide nuclei centroid glyphs.
+
+The notebook:
+
+* overlays selected local decimated meshes with nuclei centroid glyphs
+* displays annotated and unlabeled nuclei populations for spatial context
+* uses volume-weighted nuclei centroids and nucleus-volume-derived glyph sizing
+* supports user-adjustable mesh selection, nuclei display, opacity, camera, and render settings
+* preserves the interactive render → adjust camera/view → save-current-view workflow
+* saves screenshots plus render metadata when the save flag is enabled
+* requires the relevant local decimated mesh files under `data/meshes/dec`
+
+![Pyr.ai VTK nuclei centroid and mesh viewer](../img/pyr_vtk_nuclei_centroid_and_mesh_viewer_2026_08_14_1510_27.jpg)
+
+*Example VTK view combining nuclei centroids and selected cellular meshes from the Pyr.ai CA3 volume.*
+
 ## Typical Workflow
 
 The notebooks can be used independently, but a common workflow is:
