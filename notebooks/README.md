@@ -187,8 +187,6 @@ The notebook:
 
 ## Typical Workflow
 
-## Typical Workflow
-
 The notebooks can be used independently, but a common workflow is:
 
 ```text
