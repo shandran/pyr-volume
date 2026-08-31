@@ -8,10 +8,24 @@ This repository contains visualization, data-access, and analysis tools develope
 
 The project combines several approaches to exploring the Pyr.ai dataset, including:
 
-* interactive 3D visualization of mesh segmentations in the volume
-* Neuroglancer-based exploration of the Pyr volume
+* interactive 3D visualization of neuronal, cellular, and mitochondrial segmentations
+* Neuroglancer/Spelunker-based exploration of the Pyr volume
 * programmatic access to Pyr.ai data through CAVE and related services
 * synapse querying and connectivity analysis
+* nuclei-table exploration and root-population curation
+* interactive visualization with VTK and Plotly
+
+## Notebooks
+
+Public-facing Jupyter notebooks cover CAVE setup, synapse acquisition and visualization, mesh downloading and decimation, nuclei-table analysis, root-population curation, and interactive 3D visualization.
+
+See the [`notebooks` directory](notebooks/) for detailed notebook descriptions, workflow notes, and visualization examples.
+
+## Interactive Example
+
+An interactive 3D Plotly view of the screened CA3 root population is included with the repository.
+
+[Open the interactive 3D centroid viewer](YOUR_GITHUB_PAGES_URL/outputs/plotly/screened_root_population_centroids_3d.html)
 
 ## Pyr.ai and the CA3 Dataset
 
@@ -39,17 +53,16 @@ Example visualization images in this repository are also provided under CC BY-NC
 
 ## Repository Structure
 
-The repository is organized around Jupyter notebooks for individual visualization and analysis workflows, together with supporting helper modules and selected example outputs.
-
 ```text
 pyr-volume/
-├── img/
-├── notebooks/
-├── data/
+├── data/         # Selected small reference/supporting data
+├── img/          # Documentation and visualization images
+├── notebooks/    # Jupyter notebooks and shared helpers
+├── outputs/      # Selected public visualization outputs
 └── README.md
 ```
 
-Large source datasets, cached meshes, bulk synapse tables, and other generated outputs are generally not included in the repository.
+Large source datasets, cached meshes, bulk synapse tables, and other large generated artifacts are generally not included in the repository; selected lightweight data and visualization outputs are included where useful for documentation and demonstration.
 
 ## Reproducibility
 
