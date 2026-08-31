@@ -25,7 +25,7 @@ See the [`notebooks` directory](notebooks/) for detailed notebook descriptions, 
 
 An interactive 3D Plotly view of the screened CA3 root population is included with the repository.
 
-[Open the interactive 3D centroid viewer](YOUR_GITHUB_PAGES_URL/outputs/plotly/screened_root_population_centroids_3d.html)
+[Open the interactive 3D centroid viewer](https://shandran.github.io/pyr-volume/outputs/plotly/screened_root_population_centroids_3d.html)
 
 ## Pyr.ai and the CA3 Dataset
 
