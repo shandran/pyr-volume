@@ -163,6 +163,8 @@ Visualization characteristics and requirements:
 * Mesh overlays require appropriate local decimated PLY files under `data/meshes/dec` along with the relevant mesh dependencies.
 * Missing requested meshes can be skipped while the centroid view remains fully usable.
 
+![Nuclei centroid viewer](../img/interactive_centroid_viewer.png)
+
 [Open the interactive 3D centroid viewer](https://shandran.github.io/pyr-volume/outputs/plotly/screened_root_population_centroids_3d.html)
 
 ---
